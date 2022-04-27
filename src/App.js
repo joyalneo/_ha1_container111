@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AppRoute from '../common/routes/AppRoute.js';
 import { useFederatedComponent } from 'ab-federation-helpers';
-import { shield } from './shield-sdk.js';
+import { shield } from 'blox-js-sdk';
 import './assets/css/main.scss';
 import env from 'env';
 
@@ -14,7 +14,7 @@ const App = () => {
     setSystem({
       module: './layout',
       scope: 'layout',
-      url: `${env.BLOX_ENV_URL_layout}/remoteEntry.js`,
+      url: `${env.BLOX_ENV_URL_layout111}/remoteEntry.js`,
     });
   };
 
@@ -32,7 +32,7 @@ const App = () => {
 
     console.log('App.js: useEffect');
 
-    await shield.init('pRntLlwaYV2OuN_1Kc3Ua-6255');
+    await shield.init('NA5ALVskqjGiz2rMJdfUj-7691');
     const isLoggedinn = await shield.verifyLogin();
     console.log('entered', isLoggedinn);
     setIsLoggedIn(isLoggedinn);
